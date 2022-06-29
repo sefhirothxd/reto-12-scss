@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body id="banner">
+    <header id="header-fixed">
+      <nav>
+        <a href="/">
+          <img class="nav-img" src="./img/banana.png" alt="imagen banana" />
+        </a>
+        <ul>
+          <li>
+            <a class="link" href="#banner">Inicio</a>
+          </li>
+          <li>
+            <a class="link" href="#nosotros">Nosotros</a>
+          </li>
+          <li>
+            <a class="link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="banner">
+        <div class="banner__text-container">
+          <h1 class="banner__text-container-title">Bananas Store</h1>
+          <p class="banner__text-container-text">
+            Encontraras las mejores frutas de todo el mundo.
+          </p>
+          <div class="banner__text-container__container-links">
+            <a class="link-1" href="#"> Agregar al carrito </a>
+            <a class="link-2" href="#"> Ver más </a>
+          </div>
+        </div>
+        <div class="banner-container-img">
+          <img
+            class="banner__img"
+            src="./img/pepino.png"
+            alt="imagen de rick pepino"
+          />
+        </div>
+      </section>
+      <section id="nosotros" class="nosotros">
+        <div>
+          <h2 class="nosotros__title">Sobre Nosotros</h2>
+          <p class="nosotros__text">
+            Banana Store cuenta con una larga trayectoria en el sector de la
+            alimentación avalada por ya más de 25 años de experiencia. Nos
+            caracterizamos por la calidad de nuestros productos, la atención al
+            cliente y nuestro servicio de reparto. Nuestras instalaciones están
+            destinadas a la venta al mayor y al detalle de frutas y verduras
+            frescas. Al detall ofrecemos además una amplia gama de productos de
+            charcutería, víveres en general, así como todo tipo de productos
+            relacionados con la alimentación y el hogar para cubrir cualquier
+            necesidad que tenga, ya sean ricos postres o productos para el
+            hogar.
+          </p>
+        </div>
+        <div class="nosotros_img">
+          <img src="./img/cromulon.png" alt="cromulon" />
+        </div>
+      </section>
+      <section class="contacto" id="contacto">
+        <h3>Contactanos</h3>
+        <form action="" class="contacto__form-container">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
+            <input type="email" name="email" id="email" placeholder="Email" required/>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+            ></textarea>
+          </div>
+          <div class="contacto__container-input">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+        <p class="footer__text">
+          Banana Store © 2022. Todos los derechos reservados.❤
+        </p>
+    </footer>
+    <script>
+      window.onscroll = function () {
+        headerFixed();
+      };
+
+      var header = document.getElementById('header-fixed');
+      var sticky = header.offsetTop;
+
+      function headerFixed() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add('fixed');
+        } else {
+          header.classList.remove('fixed');
+        }
+      }
+    </script>
+  </body>
+</html>
